@@ -1,0 +1,107 @@
+
+<canvas width="800" height="300" id="canvas"></canvas>
+<script> 
+
+
+function draw() {
+		var hoja = document.getElementById("canvas");
+		var d = hoja.getContext("2d");
+// partes 
+				d.beginPath();	  
+				d.arc(100,150,80, 0, 2*Math.PI);
+				d.fillStyle = '#FF6E33';
+				d.strokeStyle = '#FF6E33';
+		        d.fill();
+				d.stroke();
+
+                d.beginPath();
+                d.ellipse(100, 40, 20, 80, Math.PI / 2, 0, 2 * Math.PI);
+                d.fillStyle = '#A5FF33';
+		        d.strokeStyle = '#A5FF33';
+                d.fill(); 
+                d.stroke();  
+                d.strokeStyle="#000000"; 
+                d.fillStyle="#000000";
+                d.font="16px arial";
+                d.textAlign="center";
+                d.fillText("PARTES",100,270);
+
+
+//union 
+                d.save()
+                d.beginPath();	  
+				d.arc(300,150,80, 0, 2*Math.PI);
+				d.fillStyle = '#FF6E33';
+				d.strokeStyle = '#FF6E33';
+		        d.fill();
+				d.stroke();
+                
+                d.beginPath();
+                d.ellipse(300, 150, 20, 80, Math.PI / 2, 0, 2 * Math.PI);
+                d.fillStyle = '#A5FF33';
+		        d.strokeStyle = '#A5FF33';
+                d.fill(); 
+                d.stroke();
+
+                d.strokeStyle="#000000"; 
+                d.fillStyle="#000000";
+                d.font="16px arial";
+                d.textAlign="center";
+                d.fillText("FIGURA",300,270);
+
+//rotacion 
+                
+                d.beginPath();
+                d.translate(500,150); 
+                d.rotate((Math.PI / 180) * 75);
+		        d.translate(-500,-150); 
+				d.arc(500,150,80, 0, 2*Math.PI);
+				d.fillStyle = '#FF6E33';
+				d.strokeStyle = '#FF6E33';
+		        d.fill();
+				d.stroke();
+                
+                d.beginPath();
+                d.ellipse(500, 150, 20, 80, Math.PI / 2, 0, 2 * Math.PI);
+                d.fillStyle = '#A5FF33';
+		        d.strokeStyle = '#A5FF33';
+                d.fill(); 
+                d.stroke();
+                d.restore(); 
+
+                
+                d.strokeStyle="#000000"; 
+                d.fillStyle="#000000";
+                d.font="16px arial";
+                d.textAlign="center";
+                d.fillText("ROTACIÓN",500,270);
+                d.restore();                
+//escalar
+                d.scale(1, 0.5)	 
+                d.beginPath();	  
+				d.arc(700,300,80, 0, 2*Math.PI);
+				d.fillStyle = '#FF6E33';
+				d.strokeStyle = '#FF6E33';
+		        d.fill();
+				d.stroke();
+
+                d.beginPath();
+                d.ellipse(700, 300, 20, 80, Math.PI / 2, 0, 2 * Math.PI);
+                d.fillStyle = '#A5FF33';
+		        d.strokeStyle = '#A5FF33';
+                d.fill(); 
+                d.stroke(); 
+                d.restore(); 
+
+                 
+                d.strokeStyle="#000000"; 
+                d.fillStyle="#000000";
+                d.font="16px arial";
+                d.textAlign="center";
+                d.fillText("ESCALAR",700,270);
+                d.restore(); 
+}
+draw(); 
+ 
+
+</script> 
